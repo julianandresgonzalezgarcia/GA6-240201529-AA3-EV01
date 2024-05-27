@@ -1,0 +1,41 @@
+<div>
+
+  <div mat-dialog-title class="black white-text z-depth-2" id="mat-dialog-title">
+    <h2 id="mat-dialog-title-h2">Crear Producto</h2>    
+  </div>
+
+
+
+  <mat-dialog-content id="mat-dialog-content">
+    
+    <div>
+
+      <input [(ngModel)]="producto.nombre" name="nombre" id="first_name2" type="text" class="validate" autocomplete="off">
+      <label class="active" for="first_name2">Nombre</label>
+
+      <input [(ngModel)]="producto.categoria" name="categoria" id="first_name2" type="text" class="validate" autocomplete="off">
+      <label class="active" for="first_name2">Categoria</label>
+
+      <div class="row">
+          <div class="input-field col s6">
+            <input [(ngModel)]="producto.precio" name="precio" id="first_name" type="number" class="validate" autocomplete="off">
+            <label for="first_name">Precio</label>
+          </div>
+          <div class="input-field col s6">
+            <input [(ngModel)]="producto.stock" name="stock" id="last_name" type="number" class="validate" autocomplete="off">
+            <label for="last_name">Stock</label>
+          </div>
+      </div>
+
+    </div>
+      
+  </mat-dialog-content>
+  <mat-dialog-actions align = end id="mat-dialog-actions">
+
+      <a (click)="GuardarProducto(producto)" class="white black-text btn waves-effect waves-light" id="boton-options"><i class="material-icons right">save</i>Guardar</a>
+      <!--  
+      <a mat-menu-item class="btn-floating btn-large waves-effect waves-light red" mat-dialog-close ><i class="material-icons right">close</i></a>
+      -->
+  </mat-dialog-actions>  
+</div>
+

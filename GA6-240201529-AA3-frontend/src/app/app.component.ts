@@ -55,10 +55,10 @@ export class AppComponent implements OnInit{
   ActualizarProduct(_id:any, producto:Producto){
     /*console.log(producto);*/
 
-    if(producto.nombre == ""){
+    if(producto.nombre == "" || producto.nombre == null){
       alert("Por favor llene el campo nombre");
     }
-    else if(producto.categoria == ""){
+    else if(producto.categoria == "" || producto.categoria == null){
       alert("Por favor llene el campo categoria");
     }
     else if(producto.precio == null){

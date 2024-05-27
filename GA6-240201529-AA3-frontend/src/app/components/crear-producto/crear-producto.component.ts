@@ -19,10 +19,10 @@ export class CrearProductoComponent implements OnInit {
 
   GuardarProducto(producto:Producto){
 
-    if(producto.nombre == ""){
+    if(producto.nombre == "" || producto.nombre == null){
       alert("Por favor llene el campo nombre");
     }
-    else if(producto.categoria == ""){
+    else if(producto.categoria == "" || producto.categoria == null){
       alert("Por favor llene el campo categoria");
     }
     else if(producto.precio == null){
